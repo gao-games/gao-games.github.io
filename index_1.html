@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GAOGAMES – Akış Ustası</title>
+<meta name="description" content="GAOGAMES, mobil bulmaca oyunu Akış Ustası’nın geliştiricisi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #161C42; --night-deep: #0E1230;
+    --road: #FFB24D; --road-edge: #C9711C;
+    --ball: #3CC8F5; --text: #EEF0FA; --muted: #AEB4D6;
+    --card: rgba(255,255,255,0.06); --line: rgba(255,255,255,0.12);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh;
+    background: radial-gradient(120% 80% at 50% 0%, #222B60 0%, var(--night) 45%, var(--night-deep) 100%) fixed;
+    color: var(--text);
+    font-family: "Nunito", "Segoe UI", Roboto, Arial, sans-serif; font-weight: 500;
+    line-height: 1.6; font-size: 17px;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 64px; }
+  .brand { font-weight: 900; letter-spacing: .08em; font-size: 15px; color: var(--muted); margin: 0 0 36px; }
+  .brand span { color: var(--road); }
+  .game {
+    display: grid; grid-template-columns: 148px 1fr; gap: 26px; align-items: center;
+    background: var(--card); border: 1px solid var(--line); border-radius: 28px; padding: 26px;
+  }
+  .game img { width: 148px; height: 148px; border-radius: 34px; display: block;
+    box-shadow: 0 10px 0 rgba(0,0,0,.35); }
+  h1 { font-weight: 900; font-size: clamp(32px, 7vw, 46px); line-height: 1.05; margin: 0 0 8px; }
+  h1 .a { color: var(--road); }
+  .tag { margin: 0 0 16px; color: var(--muted); }
+  .soon {
+    display: inline-block; font-weight: 800; color: var(--night-deep); background: var(--road);
+    border-bottom: 4px solid var(--road-edge); border-radius: 999px; padding: 7px 18px 5px;
+  }
+  .about { margin-top: 34px; }
+  .about p { max-width: 64ch; }
+  ul.links { list-style: none; padding: 0; margin: 34px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
+  ul.links a {
+    display: inline-block; text-decoration: none; color: var(--text); font-weight: 800;
+    border: 1px solid var(--line); background: var(--card); border-radius: 14px; padding: 10px 16px;
+  }
+  ul.links a:hover { border-color: var(--ball); }
+  a:focus-visible { outline: 3px solid var(--ball); outline-offset: 3px; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 48px; }
+  @media (max-width: 520px) {
+    .game { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="brand"><span>GAO</span>GAMES</p>
+
+  <section class="game">
+    <img src="data:image/webp;base64,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" alt="Akış Ustası simgesi: turuncu yollar üzerinde mavi bir top">
+    <div>
+      <h1><span class="a">Akış</span> Ustası</h1>
+      <p class="tag">Haritayı ezberle, kavşaklarda doğru yönü seç, topu çıkışa ulaştır.</p>
+      <span class="soon">Yakında Google Play’de</span>
+    </div>
+  </section>
+
+  <section class="about">
+    <p>GAOGAMES, Türkiye’de bağımsız olarak mobil oyunlar geliştiriyor. İlk oyunumuz <strong>Akış Ustası</strong>, kısa sürede öğrenilen ama ustalaşması zaman alan bir hafıza ve yol bulma bulmacası.</p>
+  </section>
+
+  <ul class="links">
+    <li><a href="gizlilik/">Gizlilik Politikası</a></li>
+    <li><a href="https://www.instagram.com/g_a_o_games/" rel="noopener">Instagram @g_a_o_games</a></li>
+    <li><a href="mailto:ahmet55.ao.55@gmail.com">İletişim</a></li>
+  </ul>
+
+  <footer>© 2026 GAOGAMES</footer>
+</div>
+</body>
+</html>
